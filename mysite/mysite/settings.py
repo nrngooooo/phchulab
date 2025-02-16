@@ -56,6 +56,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mysite.urls'
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:8000",
+]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -71,17 +75,17 @@ TEMPLATES = [
         },
     },
 ]
-ALLOWED_HOSTS = [
-    '8000-idx-phchulab-1738293612827.cluster-qpa6grkipzc64wfjrbr3hsdma2.cloudworkstations.dev',
-    'localhost',
-    '127.0.0.1',
-]
+# ALLOWED_HOSTS = [
+#     '8000-idx-phchulab-1738293612827.cluster-qpa6grkipzc64wfjrbr3hsdma2.cloudworkstations.dev',
+#     'localhost',
+#     '127.0.0.1',
+# ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-idx-phchulab-1738293612827.cluster-qpa6grkipzc64wfjrbr3hsdma2.cloudworkstations.dev'
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://8000-idx-phchulab-1738293612827.cluster-qpa6grkipzc64wfjrbr3hsdma2.cloudworkstations.dev'
+# ]
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
